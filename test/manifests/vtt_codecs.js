@@ -2,6 +2,10 @@ export const parsedManifest = {
   allowCache: true,
   discontinuityStarts: [],
   segments: [],
+  timelineStarts: [{
+    start: 0,
+    timeline: 0
+  }],
   endList: true,
   mediaGroups: {
     'AUDIO': {
@@ -33,7 +37,8 @@ export const parsedManifest = {
                     uri: '63000/init.m4f',
                     resolvedUri: 'https://www.example.com/63000/init.m4f'
                   },
-                  number: 0
+                  number: 0,
+                  presentationTime: 0
                 },
                 {
                   uri: '63000/1.m4f',
@@ -44,7 +49,8 @@ export const parsedManifest = {
                     uri: '63000/init.m4f',
                     resolvedUri: 'https://www.example.com/63000/init.m4f'
                   },
-                  number: 1
+                  number: 1,
+                  presentationTime: 1.984
                 },
                 {
                   uri: '63000/2.m4f',
@@ -55,7 +61,8 @@ export const parsedManifest = {
                     uri: '63000/init.m4f',
                     resolvedUri: 'https://www.example.com/63000/init.m4f'
                   },
-                  number: 2
+                  number: 2,
+                  presentationTime: 3.968
                 },
                 {
                   uri: '63000/3.m4f',
@@ -66,10 +73,17 @@ export const parsedManifest = {
                     uri: '63000/init.m4f',
                     resolvedUri: 'https://www.example.com/63000/init.m4f'
                   },
-                  number: 3
+                  number: 3,
+                  presentationTime: 5.952
                 }
               ],
               mediaSequence: 0,
+              discontinuitySequence: 0,
+              discontinuityStarts: [],
+              timelineStarts: [{
+                start: 0,
+                timeline: 0
+              }],
               contentProtection: {
                 'com.widevine.alpha': {
                   attributes: {
@@ -101,7 +115,8 @@ export const parsedManifest = {
                     uri: '125000/init.m4f',
                     resolvedUri: 'https://www.example.com/125000/init.m4f'
                   },
-                  number: 0
+                  number: 0,
+                  presentationTime: 0
                 },
                 {
                   uri: '125000/1.m4f',
@@ -112,7 +127,8 @@ export const parsedManifest = {
                     uri: '125000/init.m4f',
                     resolvedUri: 'https://www.example.com/125000/init.m4f'
                   },
-                  number: 1
+                  number: 1,
+                  presentationTime: 1.984
                 },
                 {
                   uri: '125000/2.m4f',
@@ -123,7 +139,8 @@ export const parsedManifest = {
                     uri: '125000/init.m4f',
                     resolvedUri: 'https://www.example.com/125000/init.m4f'
                   },
-                  number: 2
+                  number: 2,
+                  presentationTime: 3.968
                 },
                 {
                   uri: '125000/3.m4f',
@@ -134,10 +151,17 @@ export const parsedManifest = {
                     uri: '125000/init.m4f',
                     resolvedUri: 'https://www.example.com/125000/init.m4f'
                   },
-                  number: 3
+                  number: 3,
+                  presentationTime: 5.952
                 }
               ],
               mediaSequence: 0,
+              discontinuitySequence: 0,
+              discontinuityStarts: [],
+              timelineStarts: [{
+                start: 0,
+                timeline: 0
+              }],
               contentProtection: {
                 'com.widevine.alpha': {
                   attributes: {
@@ -177,7 +201,8 @@ export const parsedManifest = {
                     uri: '63000/es/init.m4f',
                     resolvedUri: 'https://www.example.com/63000/es/init.m4f'
                   },
-                  number: 0
+                  number: 0,
+                  presentationTime: 0
                 },
                 {
                   uri: '63000/es/1.m4f',
@@ -188,7 +213,8 @@ export const parsedManifest = {
                     uri: '63000/es/init.m4f',
                     resolvedUri: 'https://www.example.com/63000/es/init.m4f'
                   },
-                  number: 1
+                  number: 1,
+                  presentationTime: 1.984
                 },
                 {
                   uri: '63000/es/2.m4f',
@@ -199,7 +225,8 @@ export const parsedManifest = {
                     uri: '63000/es/init.m4f',
                     resolvedUri: 'https://www.example.com/63000/es/init.m4f'
                   },
-                  number: 2
+                  number: 2,
+                  presentationTime: 3.968
                 },
                 {
                   uri: '63000/es/3.m4f',
@@ -210,10 +237,17 @@ export const parsedManifest = {
                     uri: '63000/es/init.m4f',
                     resolvedUri: 'https://www.example.com/63000/es/init.m4f'
                   },
-                  number: 3
+                  number: 3,
+                  presentationTime: 5.952
                 }
               ],
               mediaSequence: 0,
+              discontinuitySequence: 0,
+              discontinuityStarts: [],
+              timelineStarts: [{
+                start: 0,
+                timeline: 0
+              }],
               contentProtection: {
                 'com.widevine.alpha': {
                   attributes: {
@@ -245,7 +279,8 @@ export const parsedManifest = {
                     uri: '125000/es/init.m4f',
                     resolvedUri: 'https://www.example.com/125000/es/init.m4f'
                   },
-                  number: 0
+                  number: 0,
+                  presentationTime: 0
                 },
                 {
                   uri: '125000/es/1.m4f',
@@ -256,7 +291,8 @@ export const parsedManifest = {
                     uri: '125000/es/init.m4f',
                     resolvedUri: 'https://www.example.com/125000/es/init.m4f'
                   },
-                  number: 1
+                  number: 1,
+                  presentationTime: 1.984
                 },
                 {
                   uri: '125000/es/2.m4f',
@@ -267,7 +303,8 @@ export const parsedManifest = {
                     uri: '125000/es/init.m4f',
                     resolvedUri: 'https://www.example.com/125000/es/init.m4f'
                   },
-                  number: 2
+                  number: 2,
+                  presentationTime: 3.968
                 },
                 {
                   uri: '125000/es/3.m4f',
@@ -278,10 +315,17 @@ export const parsedManifest = {
                     uri: '125000/es/init.m4f',
                     resolvedUri: 'https://www.example.com/125000/es/init.m4f'
                   },
-                  number: 3
+                  number: 3,
+                  presentationTime: 5.952
                 }
               ],
               mediaSequence: 0,
+              discontinuitySequence: 0,
+              discontinuityStarts: [],
+              timelineStarts: [{
+                start: 0,
+                timeline: 0
+              }],
               contentProtection: {
                 'com.widevine.alpha': {
                   attributes: {
@@ -326,7 +370,13 @@ export const parsedManifest = {
                   number: 0
                 }
               ],
-              mediaSequence: 0
+              mediaSequence: 0,
+              discontinuitySequence: 0,
+              discontinuityStarts: [],
+              timelineStarts: [{
+                start: 0,
+                timeline: 0
+              }]
             }
           ],
           uri: ''
@@ -356,7 +406,13 @@ export const parsedManifest = {
                   number: 0
                 }
               ],
-              mediaSequence: 0
+              mediaSequence: 0,
+              discontinuitySequence: 0,
+              discontinuityStarts: [],
+              timelineStarts: [{
+                start: 0,
+                timeline: 0
+              }]
             }
           ],
           uri: ''
@@ -395,7 +451,8 @@ export const parsedManifest = {
             uri: '482/init.m4f',
             resolvedUri: 'https://www.example.com/482/init.m4f'
           },
-          number: 0
+          number: 0,
+          presentationTime: 0
         },
         {
           uri: '482/1.m4f',
@@ -406,7 +463,8 @@ export const parsedManifest = {
             uri: '482/init.m4f',
             resolvedUri: 'https://www.example.com/482/init.m4f'
           },
-          number: 1
+          number: 1,
+          presentationTime: 1.9185833333333333
         },
         {
           uri: '482/2.m4f',
@@ -417,7 +475,8 @@ export const parsedManifest = {
             uri: '482/init.m4f',
             resolvedUri: 'https://www.example.com/482/init.m4f'
           },
-          number: 2
+          number: 2,
+          presentationTime: 3.8371666666666666
         },
         {
           uri: '482/3.m4f',
@@ -428,10 +487,17 @@ export const parsedManifest = {
             uri: '482/init.m4f',
             resolvedUri: 'https://www.example.com/482/init.m4f'
           },
-          number: 3
+          number: 3,
+          presentationTime: 5.75575
         }
       ],
       mediaSequence: 0,
+      discontinuitySequence: 0,
+      discontinuityStarts: [],
+      timelineStarts: [{
+        start: 0,
+        timeline: 0
+      }],
       contentProtection: {
         'com.widevine.alpha': {
           attributes: {
@@ -469,7 +535,8 @@ export const parsedManifest = {
             uri: '720/init.m4f',
             resolvedUri: 'https://www.example.com/720/init.m4f'
           },
-          number: 0
+          number: 0,
+          presentationTime: 0
         },
         {
           uri: '720/1.m4f',
@@ -480,7 +547,8 @@ export const parsedManifest = {
             uri: '720/init.m4f',
             resolvedUri: 'https://www.example.com/720/init.m4f'
           },
-          number: 1
+          number: 1,
+          presentationTime: 1.9185833333333333
         },
         {
           uri: '720/2.m4f',
@@ -491,7 +559,8 @@ export const parsedManifest = {
             uri: '720/init.m4f',
             resolvedUri: 'https://www.example.com/720/init.m4f'
           },
-          number: 2
+          number: 2,
+          presentationTime: 3.8371666666666666
         },
         {
           uri: '720/3.m4f',
@@ -502,10 +571,17 @@ export const parsedManifest = {
             uri: '720/init.m4f',
             resolvedUri: 'https://www.example.com/720/init.m4f'
           },
-          number: 3
+          number: 3,
+          presentationTime: 5.75575
         }
       ],
       mediaSequence: 0,
+      discontinuitySequence: 0,
+      discontinuityStarts: [],
+      timelineStarts: [{
+        start: 0,
+        timeline: 0
+      }],
       contentProtection: {
         'com.widevine.alpha': {
           attributes: {

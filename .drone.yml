@@ -1,0 +1,82 @@
+fbm: &filter_branch_master
+  when:
+    branch:
+      - main
+    event:
+      exclude:
+        - pull_request
+
+fbd: &filter_branch_develop
+  when:
+    branch:
+    - develop
+    event:
+      exclude:
+      - pull_request
+
+kind: pipeline
+type: docker
+name: default
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: install
+  image: public.ecr.aws/hotmart/pipeline-node:12
+  command:
+  - npm install
+  environment:
+    NPM_RC:
+      from_secret: npmrc
+
+- name: build
+  image: public.ecr.aws/hotmart/pipeline-node:12
+  command:
+  - npm run build
+  depends_on:
+  - install
+
+- name: update-package-version
+  image: public.ecr.aws/hotmart/pipeline-node:12
+  commands:
+  - git config --global user.email "${DRONE_COMMIT_AUTHOR_EMAIL}"
+  - git config --global user.name "${DRONE_COMMIT_AUTHOR_NAME}"
+  - git checkout -- .
+  - npm version patch -m "[CI SKIP] Version %s"
+  - git push origin develop
+  environment:
+    NPM_RC:
+      from_secret: npmrc
+  depends_on:
+  - build
+  <<: *filter_branch_develop
+
+- name: publish-package
+  image: public.ecr.aws/hotmart/pipeline-node:12
+  commands:
+  - npm publish
+  environment:
+    NPM_RC:
+      from_secret: npmrc
+  depends_on:
+  - build
+  <<: *filter_branch_master
+
+services:
+  - name: docker
+    image: docker:dind
+    command:
+      - --max-concurrent-downloads
+      - 6
+    environment:
+      DOCKER_TLS_CERTDIR: ""
+    privileged: true
+    volumes:
+      - name: dockersock
+        path: /var/run
+
+volumes:
+  - name: dockersock
+    temp: {}
