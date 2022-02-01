@@ -1,9 +1,9 @@
 {
   "name": "@hotmart/player-mpd-parser",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "mpd parser",
-  "main": "dist/mpd-parser.cjs.js",
-  "module": "dist/mpd-parser.es.js",
+  "main": "dist/player-mpd-parser.cjs.js",
+  "module": "dist/player-mpd-parser.es.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:videojs/mpd-parser.git"
