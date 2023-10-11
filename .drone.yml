@@ -15,7 +15,7 @@ fbd: &filter_branch_develop
       - pull_request
 
 kind: pipeline
-type: docker
+type: kubernetes
 name: default
 
 platform:
@@ -66,7 +66,7 @@ steps:
 
 services:
   - name: docker
-    image: docker:dind
+    image: public.ecr.aws/hotmart/pipeline-dind:latest
     command:
       - --max-concurrent-downloads
       - 6
